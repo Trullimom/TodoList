@@ -1,0 +1,181 @@
+body {
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-size: 20px;
+    background-image: url('https://cdn.pixabay.com/photo/2020/05/29/13/20/projects-5235095_960_720.jpg');
+    background-size: cover;
+    color: black;
+}
+
+.main-container {
+    background-color: white;
+    margin: auto;
+    padding: 30px;
+    height: auto;
+    border-radius: 20px;
+    width: 800px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+.input-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 60px;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    align-items: stretch;
+    margin-left: auto;
+}
+
+@media (max-width: 920px) {
+    .main-container,
+    .input-container {
+        width: 600px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 700px) {
+    .main-container,
+    .input-container {
+        width: 300px;
+    }
+}
+
+@media (max-width: 700px) {
+    .input-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.list-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 90px 80px;
+    column-gap: 5px;
+    row-gap: 10px;
+    align-items: center;
+    margin: auto;
+}
+
+.todo-container {
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 300px 300px 1fr;
+    align-items: center;
+    background-color: var(--darkest);
+    padding: 1rem;
+    margin: auto;
+    border-bottom: 1px solid gray;
+}
+
+@media (max-width: 920px) {
+    .todo-container {
+        grid-template-columns: 180px 180px 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .todo-container {
+        grid-template-columns: 100px 100px 1fr;
+    }
+}
+
+.todo-text,
+.due-date {
+    border: none;
+    margin-right: 20px;
+    word-wrap: break-word;
+}
+
+.todo-input,
+.date-input,
+.update-due-date {
+    font-size: 15px;
+    padding: 6px;
+}
+
+.update-due-date,
+.update-text-input {
+    width: 250px;
+}
+
+@media (max-width: 920px) {
+    .update-text-input,
+    .update-due-date {
+        width: 150px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .update-text-input,
+    .update-due-date {
+        width: 80px;
+    }
+}
+
+.todo-input:focus,
+.date-input:focus,
+.update-text-input:focus,
+.update-due-date:focus {
+    outline: none;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.add-button,
+.update-button {
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 7px;
+}
+
+.delete-button {
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 9px;
+}
+
+.add-button {
+    background-color: rgb(0, 101, 255);
+}
+
+.add-button:hover {
+    background-color: rgb(0, 177, 253);
+}
+
+.delete-button {
+    background-color: darkred;
+}
+
+.delete-button:hover {
+    background-color: rgb(228, 3, 3);
+}
+
+.update-button {
+    background-color: green;
+    margin-right: 10px;
+}
+
+.update-button:hover {
+    background-color: rgb(1, 210, 1);
+}
+
+.update-text-input {
+    font-size: 15px;
+    padding: 6px;
+    position: relative;
+}
+
+.search-delete-button {
+    position: absolute;
+}
+
